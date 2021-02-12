@@ -1,0 +1,202 @@
+/* Side Menu */
+#sidebar-wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    transform: translateX(250px);
+    background: #0d0d0e;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li.sidebar-nav-item a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+    font-size: 1.2rem;
+    height: 80px;
+    line-height: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+li.sidebar-nav-item {
+    text-align: center;
+    border-top: 1px solid #ffffff0f;
+    border-bottom: 1px solid #ffffff0f;
+}
+
+.sidebar-nav>.sidebar-brand a {
+    color: #fff;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+#sidebar-wrapper.active {
+    right: 250px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.menu-toggle {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #a7a1a1;
+    background: transparent;
+    line-height: 50px;
+    z-index: 999;
+}
+
+.menu-toggle:focus,
+.menu-toggle:hover {
+    color: #a7a1a1;
+}
+
+.menu-toggle:hover {
+    background: #343a4000;
+}
+
+/* navbar expanded */
+#mainNav {
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.932);
+    background-color: rgba(253, 253, 253, 0.527);
+}
+
+#mainNav .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+}
+
+#mainNav .navbar-brand {
+    font-weight: 400;
+    font-size: 160%;
+}
+
+#mainNav a {
+    color: black;
+}
+
+#mainNav .navbar-nav .nav-item {
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+}
+
+#mainNav.navbar-shrink {
+    border-bottom: 1px solid #1be6b7;
+    background: rgb(255, 255, 255);
+}
+
+#mainNav .navbar-nav .nav-item:hover {
+    color: fade(white, 80%);
+    outline: none;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+#mainNav .navbar-nav .nav-item:active,
+#mainNav .navbar-nav .nav-item:focus {
+    outline: none;
+    background-color: #1be6b7;
+    border-radius: 8px;
+}
+
+@media (min-width: 992px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    #mainNav {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+        -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+        transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+        letter-spacing: 1px;
+        /* border-bottom: none; */
+        background: rgba(253, 253, 253, 0.329);
+        border-bottom: 1px solid rgba(46, 45, 45, 0.336);
+    }
+
+    #mainNav a {
+        color: rgb(0, 0, 0);
+    }
+
+    #mainNav.navbar-shrink {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #000000;
+        background: rgb(255, 255, 255);
+    }
+
+    #mainNav.navbar-shrink a {
+        color: rgb(0, 0, 0);
+    }
+
+    #mainNav .nav-link.active {
+        outline: none;
+        background-color: #000000;
+        border-radius: 8px;
+    }
+
+    #mainNav .nav-link.active:hover {
+        color: white;
+    }
+
+    #mainNav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    h1.overlay-text {
+        font-size: 8rem;
+    }
+}
